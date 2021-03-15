@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Turn around</title>
+    <meta name="description" content="t06">
+    <link rel="stylesheet" href="/login.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+<div class="wrapper">
+          <h1 class="first">Welcome to ...</h1>
+          <h1 class="second">SIGN IN</h1>
+          <div class="container">
+          <form method="post" action="/login">
+                <div class="error">
+                   <% if (error !== ''){%>
+                   <div id="Err"><%= error%></div>
+                   <% }%>
+                </div>
+
+                <div class="Em dva">
+                    <label for="login"></label>
+                    <input type="text" id="login" name="login" placeholder="Login">
+                </div>
+
+                <div class="Em three">
+                    <label for="password"></label>
+                    <input type="password" id="password" name="password" placeholder="Password">
+                </div>
+
+                <div class="last">
+                    <input class="but" type="submit" value="SEND">
+                </div>
+
+                <br>
+                <div class="btn">
+                   <h2><a class="btn-blue" href="/register">Register</a></h2>
+                   <h2><a class="btn-blue" href="/remindPsw">Forgot a password?</a></h2>
+                </div>
+          </form>
+    </div>
+</div>
+</body>
+
+</html>

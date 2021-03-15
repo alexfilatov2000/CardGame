@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Turn around</title>
+    <meta name="description" content="Race02">
+    <link rel="stylesheet" href="/remindPsw.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+<div class="wrapper">
+<h1 class="first">Welcome to ...</h1>
+<h1 class="second">Password Recovery</h1>
+    <div class="container">
+<form method="post" action="/remindPsw">
+    <% if (error !== ''){%>
+    <div id="Err"><%= error%></div>
+    <% }%>
+    <div class="Em dva">
+        <label for="email"></label>
+        <input type="email" id="email" name="email" placeholder="Email">
+    </div>
+
+    <div class="last">
+        <input class="but" type="submit" value="SEND">
+    </div>
+
+
+</form>
+    </div>
+</div>
+
+</body>
+
+</html>

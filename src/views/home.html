@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    <link rel="stylesheet" href="/home.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Marvel Card Game</h1>
+    <h2>Welcome <span id="login"><%= login%></span></h2>
+    <br>
+    <div class="container">
+         <form action="/createNewGame" method="post">
+              <input class="btn-coral" type="submit" value="Create New Game">
+         </form>
+               <h2>OR</h2>
+        <form action="/joinGame" method="post" id="gameCode">
+               <input class="verification" type="text" name="code" placeholder="Enter Game Code"><br><br>
+               <input class="btn-coral" type="submit" value="joinGame">
+        </form>
+    </div>
+    <br>
+    <form action="/logout" method="post">
+        <input class="btn-blue" type="submit" value="Log Out">
+    </form>
+  </div>
+</body>
+</html>

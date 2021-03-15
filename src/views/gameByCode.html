@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #box {width:100px; height:100px; background:red;position:absolute;}
+    </style>
+    <link rel="stylesheet" href="/gameByCode.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="wrapper-game">
+    <div class="game-name">
+        <h1>This is Marvel battlefield</h1>
+        <h2>User nickname: <span><%= login%></span></h2>
+    </div>
+    <div class="player">
+        <div class="player-item">
+            <h2 class="name">Player 1</h2>
+            <div class="timer"></div>
+            <div class="coins">
+                <img src="" alt="">
+            </div>
+            <div class="coins">
+                <img src="" alt="">
+            </div>
+            <div class="coins">
+                <img src="" alt="">
+            </div>
+            <div class="coins">
+                <img src="" alt="">
+            </div>
+            <div class="coins">
+                <img src="" alt="">
+            </div>
+            <div class="coins">
+                <img src="" alt="">
+            </div>
+            <div class="coins">
+                <img src="" alt="">
+            </div>
+        </div>
+        <div class="player-item">
+            <h2 class="name">Player 2</h2>
+            <div class="timer"></div>
+            <div class="coins">
+                <img src="" alt="">
+            </div>
+            <div class="coins">
+                <img src="" alt="">
+            </div>
+            <div class="coins">
+                <img src="" alt="">
+            </div>
+            <div class="coins">
+                <img src="" alt="">
+            </div>
+            <div class="coins">
+                <img src="" alt="">
+            </div>
+            <div class="coins">
+                <img src="" alt="">
+            </div>
+            <div class="coins">
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container-battle">
+        <div class="battle-box-left">
+            <ul class="box-battle" id="FinishLeftCards">
+                <li class="item highlighted" id="item-13">
+                    <div class="card">
+                        <img src="../public/assets/images/" alt="">
+                        <div class="attack"></div>
+                        <div class="defense"></div>
+                        <h3></h3>
+                    </div>
+                </li>
+                <li class="item highlighted" id="item-14">
+                    <div class="card">
+                        <img src="../public/assets/images/" alt="">
+                        <div class="attack"></div>
+                        <div class="defense"></div>
+                        <h3></h3>
+                    </div>
+                </li>
+                <li class="item highlighted" id="item-15">
+                    <div class="card">
+                        <img src="../public/assets/images/" alt="">
+                        <div class="attack"></div>
+                        <div class="defense"></div>
+                        <h3></h3>
+                    </div>
+                </li>
+                <li class="item highlighted" id="item-16">
+                    <div class="card">
+                        <img src="../public/assets/images/" alt="">
+                        <div class="attack"></div>
+                        <div class="defense"></div>
+                        <h3></h3>
+                    </div>
+                </li>
+                <li class="item highlighted" id="item-17">
+                    <div class="card">
+                        <img src="../public/assets/images/" alt="">
+                        <div class="attack"></div>
+                        <div class="defense"></div>
+                        <h3></h3>
+                    </div>
+                </li>
+                <li class="item highlighted" id="item-18">
+                    <div class="card">
+                        <img src="../public/assets/images/" alt="">
+                        <div class="attack"></div>
+                        <div class="defense"></div>
+                        <h3></h3>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="battle-box-right">
+            <ul class="box-battle">
+                <li class="item" id="item-19">
+                    <div class="card">
+                        <img src="../public/assets/images/" alt="">
+                        <div class="attack"></div>
+                        <div class="defense"></div>
+                        <h3></h3>
+                    </div>
+                </li>
+                <li class="item" id="item-20">
+                    <div class="card">
+                        <img src="../public/assets/images/" alt="">
+                        <div class="attack"></div>
+                        <div class="defense"></div>
+                        <h3></h3>
+                    </div>
+                </li>
+                <li class="item" id="item-21">
+                    <div class="card">
+                        <img src="../public/assets/images/" alt="">
+                        <div class="attack"></div>
+                        <div class="defense"></div>
+                        <h3></h3>
+                    </div>
+                </li>
+                <li class="item" id="item-22">
+                    <div class="card">
+                        <img src="../public/assets/images/" alt="">
+                        <div class="attack"></div>
+                        <div class="defense"></div>
+                        <h3></h3>
+                    </div>
+                </li>
+                <li class="item" id="item-23">
+                    <div class="card">
+                        <img src="../public/assets/images/" alt="">
+                        <div class="attack"></div>
+                        <div class="defense"></div>
+                        <h3></h3>
+                    </div>
+                </li>
+                <li class="item" id="item-24">
+                    <div class="card">
+                        <img src="../public/assets/images/" alt="">
+                        <div class="attack"></div>
+                        <div class="defense"></div>
+                        <h3></h3>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container-card">
+        <ul class="box-placeholder" id="startLeftCards">
+            <li class="card-placeholder" id="item-1">
+                <div class="card">
+                    <img src="../public/assets/images/" alt="">
+                    <div class="attack"></div>
+                    <div class="defense"></div>
+                    <h3></h3>
+                </div>
+            </li>
+            <li class="card-placeholder" id="item-2">
+                <div class="card">
+                    <img src="../public/assets/images/" alt="">
+                    <div class="attack"></div>
+                    <div class="defense"></div>
+                    <h3></h3>
+                </div>
+            </li>
+            <li class="card-placeholder" id="item-3">
+                <div class="card">
+                    <img src="../public/assets/images/" alt="">
+                    <div class="attack"></div>
+                    <div class="defense"></div>
+                    <h3></h3>
+                </div>
+            </li>
+            <li class="card-placeholder" id="item-4">
+                <div class="card">
+                    <img src="../public/assets/images/" alt="">
+                    <div class="attack"></div>
+                    <div class="defense"></div>
+                    <h3></h3>
+                </div>
+            </li>
+            <li class="card-placeholder" id="item-5">
+                <div class="card">
+                    <img src="../public/assets/images/" alt="">
+                    <div class="attack"></div>
+                    <div class="defense"></div>
+                    <h3></h3>
+                </div>
+            </li>
+            <li class="card-placeholder" id="item-6">
+                <div class="card">
+                    <img src="../public/assets/images/" alt="">
+                    <div class="attack"></div>
+                    <div class="defense"></div>
+                    <h3></h3>
+                </div>
+            </li>
+        </ul>
+        <ul class="box-placeholder">
+            <li class="card-placeholder" id="item-7">
+                <div class="card">
+                    <img src="../public/assets/images/" alt="">
+                    <div class="attack"></div>
+                    <div class="defense"></div>
+                    <h3></h3>
+                </div>
+            </li>
+            <li class="card-placeholder" id="item-8">
+                <div class="card">
+                    <img src="../public/assets/images/" alt="">
+                    <div class="attack"></div>
+                    <div class="defense"></div>
+                    <h3></h3>
+                </div>
+            </li>
+            <li class="card-placeholder" id="item-9">
+                <div class="card">
+                    <img src="../public/assets/images/" alt="">
+                    <div class="attack"></div>
+                    <div class="defense"></div>
+                    <h3></h3>
+                </div>
+            </li>
+            <li class="card-placeholder" id="item-10">
+                <div class="card">
+                    <img src="../public/assets/images/" alt="">
+                    <div class="attack"></div>
+                    <div class="defense"></div>
+                    <h3></h3>
+                </div>
+            </li>
+            <li class="card-placeholder" id="item-11">
+                <div class="card">
+                    <img src="../public/assets/images/" alt="">
+                    <div class="attack"></div>
+                    <div class="defense"></div>
+                    <h3></h3>
+                </div>
+            </li>
+            <li class="card-placeholder" id="item-12">
+                <div class="card">
+                    <img src="../public/assets/images/" alt="">
+                    <div class="attack"></div>
+                    <div class="defense"></div>
+                    <h3></h3>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<script>
+    let room = '<%= code%>';
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/gameByCode.js"></script>
+</body>
+</html>

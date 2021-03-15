@@ -1,0 +1,9 @@
+{
+  "db": {
+    "user": "ofilatovUsers",
+    "host": "localhost",
+    "database": "users",
+    "password": "securepass"
+  }
+}
+

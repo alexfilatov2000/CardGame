@@ -1,0 +1,168 @@
+body{
+    background-image: url(https://www.free-largeimages.com/wp-content/uploads/2019/08/31af658f2d66b4b667345dbd58959c9e.jpg);
+}
+
+h1{
+    width: 700px;
+    text-align: center;
+    text-shadow: rgba(255,255,255,0.9) 0 0 20px;
+    background: #1e2a4f;
+    box-shadow: #1e2a4f 4vh 0 5vh 0;
+}
+
+h2.name{
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 2vh;
+    text-shadow: rgba(255,255,255,0.9) 0 0 5px;
+    padding: 10px;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper-game{
+    position: relative;
+    background:url(../public/assets/images/shield_а.png) no-repeat;
+    background-size: 100%;
+    width: 1600px;
+    height: 1200px;
+    margin:50px auto;
+    padding: 30px 5px;
+    z-index: 8;
+}
+
+.container-battle{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    background:none;
+    justify-content: space-between;
+    width: 1600px;
+    height: 1070px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.container-card{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 1800px;
+    height: 250px;
+    background: #e77489;
+    left: -100px;
+    bottom: -80px;
+    z-index: 4;
+    border-radius: 20px;
+}
+
+.battle-box-left, .battle-box-right{
+    width: 130px;
+    height: 1050px;
+    margin: 10px 50px;
+    border-radius: 15px;
+    padding:0 15px;
+    background: rgba(255,255,255, 0.3);
+    border: 1px solid white;
+}
+
+.box-placeholder{
+    display: flex;
+    justify-content: space-between;
+    width: 850px;
+    height: 200px;
+    background: none;
+    margin: 10px 0;
+}
+
+.item, .card-placeholder {
+    background: none;
+    width: 120px;
+    height: 160px;
+    margin: 10px 5px;
+    border-radius: 15px;
+    border:3px solid lightgrey;
+    background: rgba(255,255,255, 0.3);
+}
+
+/*.item:hover{*/
+/*    border:3px solid lightgrey;*/
+/*    background: rgba(255,255,255, 0.3);*/
+/*}*/
+
+.game-name{
+    position: absolute;
+    top:0;
+    width: 800px;
+    left:430px;
+}
+
+.card-placeholder{
+    background: none;
+    border:3px solid darkred;
+}
+
+.gamer{
+    width: 760px;
+    height: 20px;
+    margin: 10px 20px;
+    background: cornflowerblue;
+}
+
+.timer{
+    width: 80px;
+    height: 50px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 2vh;
+    text-shadow: rgba(255,255,255,0.9) 0 0 5px;
+    background: rgba(255,255,255, 0.8);
+    border:1px solid white;
+    margin: 10px;
+    padding: 5px;
+}
+
+.coins{
+    width: 2vh;
+    height: 2vh;
+    text-shadow: rgba(255,255,255,0.9) 0 0 5px;
+    background: rgba(255,255,255, 0.3);
+    border:1px solid white;
+    border-radius:50%;
+    margin: 25px 2px;
+}
+
+.player{
+    position: absolute;
+    top: 950px;
+    left: -100px;
+    width: 1800px;
+    display: flex;
+    justify-content: center;
+    background: none;
+}
+
+.player-item{
+    display: flex;
+    width: 500px;
+    flex-direction: row;
+    background: rgba(215,190,0,0.3);
+    margin:10px 50px;
+    border-radius: 15px;
+    border: 3px solid white;
+}
+
+/*.highlighted {*/
+/*    background-color: #9AB6F1;*/
+/*}*/
+
+@media screen and (max-width: 768px) {
+    body{
+        background:none;
+    }
+}

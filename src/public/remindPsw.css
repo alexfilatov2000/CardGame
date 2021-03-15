@@ -1,0 +1,29 @@
+body{
+    background: url(https://www.hdwallpapers.in/download/disneyland_paris_marvel_summer_of_superheroes-1280x800.jpg);
+}
+
+.Em input{
+    padding: 40px 0 15px 0;
+    width: 95%;
+    border: 0;
+    background: none;
+    border-bottom: 1px solid grey;
+    font-size: 3vh;
+}
+
+.Em input:focus{
+    outline: none;
+}
+
+.Em label{
+    display: none;
+    outline: red;
+}
+
+.dva{
+    justify-content: space-around;
+}
+
+.three{
+    justify-content: space-around;
+}

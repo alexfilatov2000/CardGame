@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <meta name="description" content="Race02">
+    <link rel="stylesheet" href="/game.css">
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+<div class="wrapper">
+    <h1>Code is <span style="color: red"><%= gameCode%></span></h1><br>
+    <div class="container">
+    <form action="/game/<%= gameCode%>" method="get">
+        <input class="btn-blue" type="submit" value="Start The Game">
+    </form>
+    </div>
+</div>
+</body>
+</html>

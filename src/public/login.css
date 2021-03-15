@@ -1,0 +1,35 @@
+body{
+    background-image: url(https://www.free-largeimages.com/wp-content/uploads/2019/08/31af658f2d66b4b667345dbd58959c9e.jpg);
+}
+
+.Em input{
+    padding: 40px 0 15px 0;
+    width: 100%;
+    border: 0;
+    background: none;
+    border-bottom: 1px solid grey;
+    font-size: 3vh;
+}
+
+.Em input:focus{
+    outline: none;
+}
+
+.Em label{
+    display: none;
+    outline: red;
+}
+
+.dva{
+    justify-content: space-around;
+}
+
+.three{
+    justify-content: space-around;
+}
+
+.btn{
+    display:flex;
+    justify-content: space-between;
+}
+
