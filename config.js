@@ -1,6 +1,6 @@
 const myInfo = {
     email: 'tanyaarni@gmail.com',
-    password: 'z4127052z'
+    password: ''
 }
 
 module.exports.myInfo = myInfo;
