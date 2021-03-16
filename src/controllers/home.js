@@ -1,5 +1,6 @@
 const shortid = require('shortid');
 const {User} = require('../models/user');
+const {Card} = require('../models/card');
 
 module.exports = class HomeController {
     static async homeGet(ctx) {
@@ -43,11 +44,10 @@ module.exports = class HomeController {
 
             io.on('connection', socket => {
                 socket.removeAllListeners();
-                // console.log('ok');
-                // socket.emit('message', 'hi bro');
 
-                socket.on('create', (room) => {
+                socket.on('create', (room, data) => {
                     socket.join(room);
+                    socket.to(room).emit('startCards',data);
                 })
 
                 socket.on('move',function(room, data){
@@ -56,11 +56,18 @@ module.exports = class HomeController {
                 })
 
             })
-
+            let card = new Card();
+            let firstCard = await card.getRandomCard(1, 20);
+            let secondCard = await card.getRandomCard(1, 20);
+            let thirdCard = await card.getRandomCard(1, 20);
+            console.log(firstCard);
 
             await ctx.render('gameByCode', {
                 login: ctx.session.userId,
-                code: code
+                code: code,
+                card1: firstCard,
+                card2: secondCard,
+                card3: thirdCard,
             })
         }
     }
