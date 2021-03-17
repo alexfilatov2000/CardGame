@@ -38,13 +38,32 @@ app.use(async(ctx, next) => {
     } catch (err) {
         ctx.status = err.status || 500
         if (ctx.status === 404) {
-            //Your 404.jade
             await ctx.render('404')
         } else {
-            //other_error jade
             await ctx.render('other_error')
         }
     }
+})
+
+io.on('connection', socket => {
+    socket.removeAllListeners();
+
+    socket.on('create', (room) => {
+        socket.join(room);
+    })
+
+    socket.on('move', (room, data) => {
+        socket.to(room).emit('moveall',data);
+    })
+
+    socket.on('setRandCard', (room, data) => {
+        io.to(room).emit('getRandCard', data);
+    })
+
+    socket.on('setStartThreeCards', (room, data) => {
+        io.to(room).emit('getStartThreeCards', data);
+    })
+
 })
 
 

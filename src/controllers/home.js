@@ -41,34 +41,30 @@ module.exports = class HomeController {
         if (!userData){
             return ctx.render('404');
         } else {
-
-            io.on('connection', socket => {
-                socket.removeAllListeners();
-
-                socket.on('create', (room, data) => {
-                    socket.join(room);
-                    socket.to(room).emit('startCards',data);
-                })
-
-                socket.on('move',function(room, data){
-                    socket.to(room).emit('moveall',data);
-                    console.log(222);
-                })
-
-            })
             let card = new Card();
-            let firstCard = await card.getRandomCard(1, 20);
-            let secondCard = await card.getRandomCard(1, 20);
-            let thirdCard = await card.getRandomCard(1, 20);
-            console.log(firstCard);
+            let firstThreeCardsForFirstPlayer = await card.getFirstThreeCardsForFirstPlayer();
 
             await ctx.render('gameByCode', {
                 login: ctx.session.userId,
                 code: code,
-                card1: firstCard,
-                card2: secondCard,
-                card3: thirdCard,
+                card1: firstThreeCardsForFirstPlayer,
             })
         }
+    }
+
+    static async getRandCard(ctx) {
+        let card = new Card();
+        let randCard = await card.getRandomCard(1, 20);
+        randCard.img = `/assets/images/${randCard.id}.png`
+        ctx.body = randCard;
+    }
+
+    static async startThreeCards(ctx) {
+        let card = new Card();
+        let firstThreeCardsForFirstPlayer = await card.getFirstThreeCardsForFirstPlayer(1, 20);
+        for (let i = 0; i < 3; i++){
+            firstThreeCardsForFirstPlayer[i].img = `/assets/images/${firstThreeCardsForFirstPlayer[i].id}.png`
+        }
+        ctx.body = firstThreeCardsForFirstPlayer;
     }
 }

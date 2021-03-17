@@ -14,8 +14,8 @@ restRouter.get('/remindPsw', userController.redirectHome, userController.remindP
 
 restRouter.post('/createNewGame', userController.redirectLogin, homeController.createNewGame);
 restRouter.post('/joinGame', userController.redirectLogin, homeController.joinGame);
+restRouter.post('/getRandCard', homeController.getRandCard);
+restRouter.post('/startThreeCards', homeController.startThreeCards);
 restRouter.get('/', userController.redirectLogin, homeController.homeGet);
 restRouter.get('/game', userController.redirectLogin, homeController.game);
 restRouter.get('/game/:code', userController.redirectLogin, homeController.gameByCode);
-
-
