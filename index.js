@@ -56,12 +56,20 @@ io.on('connection', socket => {
         socket.to(room).emit('moveall',data);
     })
 
-    socket.on('setRandCard', (room, data) => {
-        io.to(room).emit('getRandCard', data);
+    socket.on('setRandCard1', (room, data) => {
+        io.to(room).emit('getRandCard1', data);
     })
 
-    socket.on('setStartThreeCards', (room, data) => {
-        io.to(room).emit('getStartThreeCards', data);
+    socket.on('setRandCard2', (room, data) => {
+        io.to(room).emit('getRandCard2', data);
+    })
+
+    socket.on('setStartThreeCards1', (room, data) => {
+        io.to(room).emit('getStartThreeCards1', data);
+    })
+
+    socket.on('setStartThreeCards2', (room, data) => {
+        io.to(room).emit('getStartThreeCards2', data);
     })
 
 })

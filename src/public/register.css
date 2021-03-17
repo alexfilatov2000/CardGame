@@ -4,21 +4,23 @@ body{
 
 .confirm{
     display: flex;
+    flex-direction:column;
+    justify-content: space-between;
     width:100%;
     text-align: center;
-    justify-content: space-between;
 }
 
 .Em input{
     flex-direction: row;
     flex-wrap: nowrap;
-    padding: 40px 0 15px 0;
+    padding: 4vh 0 1.5vh 0;
     width: 95%;
     border: 0;
     background: none;
     border-bottom: 1px solid grey;
     font-size: 3vh;
 }
+
 
 .Em input:focus{
     outline: none;
@@ -30,16 +32,18 @@ body{
 }
 
 .dva{
-    justify-content: space-around;
+    float: left;
+    width:98%;
 }
 
 .three{
-    justify-content: space-around;
+    float: left;
+    width:98%;
 }
 
 #Err{
     margin: 0 20%;
-    font-size: 20px;
+    font-size: 2vh;
     background-color: red;
     font-family: Arial,sans-serif;
     color: white;

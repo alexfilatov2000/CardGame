@@ -25,10 +25,10 @@ ul{
 
 .wrapper-game{
     position: relative;
-    /*background:rgba(255,0,255,0.3);*/
+    background:none;
     background-size: 100%;
     width: 90%;
-    height: 750px;
+    height: 65vh;
     margin:5vh auto;
 }
 .container-card{
@@ -46,6 +46,40 @@ ul{
 }
 
 /*--------------------------------------------------------------------*/
+.btn-blue {
+    z-index: 99999;
+    cursor: pointer;
+    position: fixed;
+    margin: 3vh auto;
+    color:white;
+    font-size: 2vh;
+    background: #1e2a4f;
+    box-shadow: #e77489 0vh 0vh 2vh 1vh;
+    padding: 2vh 5vh;
+    border-radius: 3vh;
+    border: none;
+    outline: none;
+    transition: background 60s;
+}
+
+#startGame.btn-blue {
+    left: 20vh;
+    top: 35%;
+}
+
+#endTurn.btn-blue {
+    right: 20vh;
+    top: 35%;
+}
+
+.btn-blue:hover{
+    background: #e77489;
+}
+
+.btn-blue:active{
+    background: gold;
+    transition: background 0s;
+}
 
 .box-placeholder-1, .box-placeholder-2{
     display: flex;
@@ -77,7 +111,7 @@ ul{
     height: 80vh;
     margin: -3vh 20vh;
     border-radius: 1.5vh;
-    padding:0 15px;
+    padding:0 1.5vh;
     background: rgba(255,255,255, 0.3);
     border: 1px solid white;
     z-index:12;
@@ -86,7 +120,6 @@ ul{
 .battle-img{
     margin: 0 auto;
     width: 120vh;
-    height: 120vh;
     background:url(/assets/images/shield_а.png) no-repeat;
     background-size: 100%;
 }
@@ -193,7 +226,9 @@ ul{
     width: 6vh;
     height: 5vh;
     font-family: "Source Sans Pro", sans-serif;
-    font-size: 2vh;
+    font-size: 4vh;
+    text-align: center;
+    color: #1e2a4f;
     text-shadow: rgba(255,255,255,0.9) 0 0 5px;
     background: rgba(255,255,255, 0.8);
     border:1px solid white;
@@ -208,13 +243,12 @@ ul{
     background: rgba(255,255,255, 0.3);
     border:1px solid white;
     border-radius:50%;
-    margin: 2vh 2px;
+    margin: 2vh 0.3vh;
 }
 .coins img{
     position: absolute;
     width: 2vh;
     height: 2vh;
-    background: url('/assets/images/coin.png');
     background-size:100%;
     top:0;
     left: 0;
@@ -237,5 +271,10 @@ ul{
     background: rgba(215,190,0,0.3);
     border-radius: 1.5vh;
     border: 3px solid white;
+    box-shadow: #e77489 0vh 0vh 2vh 1vh;
 }
 
+#endTurnSec{
+    right: 20vh;
+    top: 25%;
+}

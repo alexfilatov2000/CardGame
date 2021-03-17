@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="/gameByCode.css">
 </head>
 <body>
-<button id="startGame" style="padding: 30px">START</button>
-<button id="endTurn" style="padding: 30px">endTurn</button>
+<button class="btn-blue" id="startGame" style="padding: 30px">START</button>
+<button class="btn-blue" id="endTurn" style="padding: 30px">Add card for Player 1</button>
+<button class="btn-blue" id="endTurnSec" style="padding: 30px">Add card for Player 2</button>
 <div class="wrapper-game">
     <div class="game-name">
         <h1>This is Marvel battlefield</h1>
@@ -106,59 +107,29 @@
         </div>
 
         <div class="battle-box-right">
-            <ul class="box-battle">
+            <ul class="box-battle" id="FinishRightCards">
                 <li class="item" id="item-19">
                     <div class="card">
-                        <img src="" alt="">
-                        <h3 class="cardName"></h3>
-                        <div class="attack"></div>
-                        <div class="health"></div>
-                        <div class="price"></div>
                     </div>
                 </li>
                 <li class="item" id="item-20">
                     <div class="card">
-                        <img src="" alt="">
-                        <h3 class="cardName"></h3>
-                        <div class="attack"></div>
-                        <div class="health"></div>
-                        <div class="price"></div>
                     </div>
                 </li>
                 <li class="item" id="item-21">
                     <div class="card">
-                        <img src="" alt="">
-                        <h3 class="cardName"></h3>
-                        <div class="attack"></div>
-                        <div class="health"></div>
-                        <div class="price"></div>
                     </div>
                 </li>
                 <li class="item" id="item-22">
                     <div class="card">
-                        <img src="" alt="">
-                        <h3 class="cardName"></h3>
-                        <div class="attack"></div>
-                        <div class="health"></div>
-                        <div class="price"></div>
                     </div>
                 </li>
                 <li class="item" id="item-23">
                     <div class="card">
-                        <img src="" alt="">
-                        <h3 class="cardName"></h3>
-                        <div class="attack"></div>
-                        <div class="health"></div>
-                        <div class="price"></div>
                     </div>
                 </li>
                 <li class="item" id="item-24">
                     <div class="card">
-                        <img src="" alt="">
-                        <h3 class="cardName"></h3>
-                        <div class="attack"></div>
-                        <div class="health"></div>
-                        <div class="price"></div>
                     </div>
                 </li>
             </ul>
@@ -167,72 +138,22 @@
 
     <div class="container-card">
         <ul class="box-placeholder-1" id="startLeftCards">
-
         </ul>
-        <ul class="box-placeholder-2">
-            <li class="card-placeholder" id="item-7">
-                <div class="card">
-                    <img src="" alt="">
-                    <h3 class="cardName"></h3>
-                    <div class="attack"></div>
-                    <div class="health"></div>
-                    <div class="price"></div>
-                </div>
-            </li>
-            <li class="card-placeholder" id="item-8">
-                <div class="card">
-                    <img src="" alt="">
-                    <h3 class="cardName"></h3>
-                    <div class="attack"></div>
-                    <div class="health"></div>
-                    <div class="price"></div>
-                </div>
-            </li>
-            <li class="card-placeholder" id="item-9">
-                <div class="card">
-                    <img src="" alt="">
-                    <h3 class="cardName"></h3>
-                    <div class="attack"></div>
-                    <div class="health"></div>
-                    <div class="price"></div>
-                </div>
-            </li>
-            <li class="card-placeholder" id="item-10">
-                <div class="card">
-                    <img src="" alt="">
-                    <h3 class="cardName"></h3>
-                    <div class="attack"></div>
-                    <div class="health"></div>
-                    <div class="price"></div>
-                </div>
-            </li>
-            <li class="card-placeholder" id="item-11">
-                <div class="card">
-                    <img src="" alt="">
-                    <h3 class="cardName"></h3>
-                    <div class="attack"></div>
-                    <div class="health"></div>
-                    <div class="price"></div>
-                </div>
-            </li>
-            <li class="card-placeholder" id="item-12">
-                <div class="card">
-                    <img src="" alt="">
-                    <h3 class="cardName"></h3>
-                    <div class="attack"></div>
-                    <div class="health"></div>
-                    <div class="price"></div>
-                </div>
-            </li>
+
+        <ul class="box-placeholder-2" id="startRightCards">
         </ul>
     </div>
 
 </div>
 <script>
     let room = '<%= code%>';
+    let startCnt = 0;
 </script>
 <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
 <script src="/socket.io/socket.io.js"></script>
-<script src="/js/LeftPlayer.js"></script>
+<script src="/js/LeftPlayer.js" type="module"></script>
+<script src="/js/RightPlayer.js" type="module"></script>
+<script src="/js/stratGame.js" type="module"></script>
+<script src="/js/fight.js" type="module"></script>
 </body>
 </html>

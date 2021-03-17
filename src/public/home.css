@@ -8,15 +8,15 @@ body{
 
 .verification{
     width: 50%;
-    padding: 30px;
+    padding: 3vh;
     border: 3px solid #1e2a4f;
-    border-radius: 5px;
+    border-radius: 0.5vh;
 }
 
 #gameCode{
     border: 3px solid #e77489;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 1vh;
+    border-radius: 0.5vh;
 }
 
 
