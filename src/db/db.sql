@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS userInfo (
     name VARCHAR(30) NOT NULL,
     login VARCHAR(30) NOT NULL,
     email VARCHAR(30) NOT NULL,
-    password VARCHAR(30) NOT NULL,
+    password VARCHAR(200) NOT NULL,
     status INT DEFAULT 0,
     code VARCHAR(30) DEFAULT '0',
     UNIQUE (login)
